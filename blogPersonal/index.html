@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog de Paula</title>
+
+  <!-- Íconos mágicos -->
+  <script src="https://kit.fontawesome.com/1e3e2e637a.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/funciones.js" defer></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+  <h1>Bienvenida a mi blog mágico</h1>
+  <nav>
+    <button onclick="mostrarSeccion('sobre-mi')"><i class="fas fa-user-astronaut"></i> Sobre mí</button>
+    <button onclick="mostrarSeccion('agenda')"><i class="fas fa-book-open"></i> Agenda</button>
+    <button onclick="mostrarSeccion('momentos')"><i class="fas fa-spa"></i> Mis momentos</button>
+    <button onclick="mostrarSeccion('apoyo')"><i class="fas fa-headphones-alt"></i> Material de apoyo</button>
+    <button onclick="mostrarSeccion('contacto')"><i class="fas fa-envelope"></i> Contacto</button>
+  </nav>
+  <div class="redes-sociales">
+    <a href="https://open.spotify.com/show/0CFzlUpDn64uTX5cssWmB6?si=ec9b95705cda4c89" target="_blank" title="Spotify"><i class="fab fa-spotify"></i></a>
+    <a href="https://www.instagram.com/paulita_jazminc" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.facebook.com/share/1Xh8VZ7jwf" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.tiktok.com/@paulajazmincastil" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+    <a href="https://youtube.com/@despiertatupoder-k2l" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+  </div>
+</header>
+
+<main>
+  <section id="sobre-mi" class="seccion">
+    <div class="contenedor-sobre-mi">
+      <div class="foto-sobre-mi">
+        <img src="img/paula-perfil.jpg" alt="Mi foto">
+      </div>
+      <div class="texto-sobre-mi">
+        <h2>Sobre mí</h2>
+        <p>
+          Bienvenida a mi espacio personal. Este blog es una extensión de mi jornada, donde comparto mis reflexiones, aprendizajes y momentos que me ayudan a crecer tanto en lo personal como en lo profesional.</p>
+        <p>En él encontrarás artículos sobre sanación del cuerpo y la mente, desarrollo personal, tips de bienestar, y mucho más.
+          También comparto mi pasión por la tecnología y el desarrollo web, ya que estoy en constante proceso de aprendizaje y experimentación.
+          Acompáñame en este viaje y espero que encuentres algo que resuene contigo. ¡Nos vemos en cada post!
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="agenda" class="seccion">
+    <img src="img/portada.png" alt="Mi Agenda" class="agenda-img">
+    <div class="agenda-texto">
+      <h2>Mi Agenda Espiritual</h2>
+      <p>En un mundo lleno de retos y posibilidades, es fundamental reconectar con nuestro poder interior, cultivar nuestra mente y sanar nuestras emociones. Esta agenda ha sido diseñada como u a herramienta de guia y trasformacion personal. Su prposito es ayudarte a manifestar tus metas, enseñarte a visualizar tus sueños y acompañarte en el proceso de sanar aquello que pueda estar frenando tu crecimiento.</p>
+
+      <p>A travez de ejercicios practicos, reflexiones diarias y espacio para la creatividad, esta agenda busca ser mucho mas que un simple organizador: es un acompañante en tu camino hacia la vida mas plena y consciente. Aqui encontraras tecnicas para fortalecer la conexion contigo mismo, liberar bloqueos internos y abrirte a nuevas posibilidades.</p>
+        
+      <p>El viaje hacia la manifestacion, la visualizacion y la sanacion comienza aqui. ¿Estas lista para descubrir todo lo que puedes crear? ¡El momento de transformar tu vida es ahora!</p>
+      <a href="https://go.hotmart.com/G98220707Y?dp=1" class="btn">¡Quiero la mía!</a>
+    </div>
+  </section>
+
+  <section id="momentos" class="seccion">
+    <h2><i class="fas fa-spa"></i> Mis Momentos</h2>
+    <div class="diario">
+      <h3>Mi día a día ✍️</h3>
+      <textarea id="texto-dia" placeholder="Hoy me sentí..."></textarea>
+      <button onclick="guardarNota()">Guardar</button>
+      <div id="notas-guardadas">
+        <h4>Entradas anteriores:</h4>
+        <ul id="lista-notas"></ul>
+      </div>
+    </div>
+    <div class="galeria">
+      <img src="img/familia.jpeg" alt="Paseo 1">
+      <img src="img/hijamayor.jpeg" alt="Paseo 2">
+    </div>
+    <div class="videos">
+      <video controls src="videos/paseo-video1.mp4"></video>
+      <video controls src="videos/paseo-video2.mp4"></video>
+    </div>
+  </section>
+
+  <section id="apoyo" class="seccion">
+    <h2>Material de Apoyo</h2>
+    <div class="material">
+      <a href="material/plantilla-gratitud.pdf" download>🌸 Plantilla de Gratitud</a>
+      <a href="material/mini-ebook-sanar.pdf" download>✨ Mini eBook: Sanar con Amor</a>
+      <a href="material/alarma-gratitud.mp3" download>🌞 Alarma para un buen Despertar</a>
+    </div>
+  </section>
+
+  <section id="contacto" class="seccion">
+    <h2><i class="fas fa-envelope"></i> Contáctame ✨</h2>
+    <form id="formulario">
+      <input type="text" placeholder="Tu nombre" required>
+      <input type="email" placeholder="Tu correo" required>
+      <textarea placeholder="¿En qué puedo ayudarte?" required></textarea>
+      <button type="submit"><i class="fas fa-paper-plane"></i> Enviar mensaje</button>
+    </form>
+  </section>
+</main>
+
+<button id="ir-arriba" title="Volver arriba">
+  <i class="fas fa-star"></i> Arriba
+  <audio id="sonido-subir" src="sonidos/magic-chime.wav" preload="auto"></audio>
+</button>
+
+<footer>
+  <!-- Puedes agregar tus datos de contacto o frase final aquí -->
+</footer>
+
+<script src="script.js"></script>
+<script>
+  function guardarNota() {
+    const texto = document.querySelector('.diario textarea').value;
+    localStorage.setItem('diario-paula', texto);
+    alert("Tu día fue guardado 🌸");
+  }
+
+  window.addEventListener('load', () => {
+    const guardado = localStorage.getItem('diario-paula');
+    if (guardado) {
+      document.querySelector('.diario textarea').value = guardado;
+    }
+  });
+</script>
+</body>
+</html>
